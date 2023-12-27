@@ -1,31 +1,16 @@
-import { HiMenuAlt2 } from "react-icons/hi";
-const Sidebar = () => {
+const Sidebar = ({ isOpen }) => {
   return (
-    <div className="drawer">
-      <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content">
-        {/* Page content here */}
-        <label htmlFor="my-drawer" className="btn btn-primary drawer-button">
-          Open drawer
-        </label>
-      </div>
-      <div className="drawer-side">
-        <label
-          htmlFor="my-drawer"
-          aria-label="close sidebar"
-          className="drawer-overlay"
-        ></label>
-        <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-          {/* Sidebar content here */}
-          <li>
-            <a>Sidebar Item 1</a>
-          </li>
-          <li>
-            <a>Sidebar Item 2</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <aside
+      className={`p-10 transform transition-transform ${
+        isOpen ? "translate-x-0 w-56 bg-green-700" : "-translate-x-full w-0"
+      }`}
+    >
+      <ul>
+        <li>hi</li>
+        <li>hello</li>
+        <li>good</li>
+      </ul>
+    </aside>
   );
 };
 

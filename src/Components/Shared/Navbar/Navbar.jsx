@@ -1,9 +1,9 @@
 import Sidebar from "../../Pages/Home/Sidebar/Sidebar";
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }) => {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
-        <Sidebar />
+        <button onClick={toggleSidebar}>sidebar toggle button</button>
         <a className="btn btn-ghost text-xl">daisyUI</a>
       </div>
       <div className="navbar-center hidden lg:flex">
